@@ -126,36 +126,31 @@ El proyecto está compuesto por los siguientes elementos:
      calificacion(_, Producto, Puntuacion)), 
     Lista).
      ```
-    - **Recomendación recursiva:**
+   - **Recomendación recursiva:**
 
-   Definición de regla en Prolog:
-    ```prolog
-     recomendar_recursivo(_, [], []).
+  ```prolog
+  recomendar_recursivo(_, [], []).
 
-recomendar_recursivo(Usuario, [ProductoComprado|Resto], ListaFinal) :-
-    findall(ProductoRecomendado,
-        (producto(ProductoRecomendado, Categoria),
-         producto(ProductoComprado, Categoria),
-         ProductoComprado \= ProductoRecomendado,
-         not(compra(Usuario, ProductoRecomendado))),
-        Recomendaciones),
-    recomendar_recursivo(Usuario, Resto, RestoRecomendados),
-    append(Recomendaciones, RestoRecomendados, ListaSinDuplicados),
-    sort(ListaSinDuplicados, ListaFinal).
+  recomendar_recursivo(Usuario, [ProductoComprado|Resto], ListaFinal) :-
+      findall(ProductoRecomendado,
+          (producto(ProductoRecomendado, Categoria),
+           producto(ProductoComprado, Categoria),
+           ProductoComprado \= ProductoRecomendado,
+           not(compra(Usuario, ProductoRecomendado))),
+          Recomendaciones),
+      recomendar_recursivo(Usuario, Resto, RestoRecomendados),
+      append(Recomendaciones, RestoRecomendados, ListaSinDuplicados),
+      sort(ListaSinDuplicados, ListaFinal).
 
-recomendar_con_recursion(Usuario, ListaRecomendada) :-
-    findall(Producto, compra(Usuario, Producto), Compras),
-    recomendar_recursivo(Usuario, Compras, ListaRecomendada).
-     ```
+  recomendar_con_recursion(Usuario, ListaRecomendada) :-
+      findall(Producto, compra(Usuario, Producto), Compras),
+      recomendar_recursivo(Usuario, Compras, ListaRecomendada).
 
-   Forma general de la relación:
-     ```prolog
-      recomendar_con_recursion(Usuario, Lista).
-     ```
-   Ejemplo:
-   ```prolog
-     recomendar_con_recursion(maria, Lista).
-     ```
+  % Forma general de la relación:
+  recomendar_con_recursion(Usuario, Lista).
+
+  % Ejemplo de consulta en Prolog:
+  recomendar_con_recursion(maria, Lista).
 
 - **Top 10 mejores productos:**
 
