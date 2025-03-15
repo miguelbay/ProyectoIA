@@ -88,14 +88,14 @@ El proyecto está compuesto por los siguientes elementos:
      
    - **Calificación que un usuario :**
   
-        Forma general de la relación:
-        ```prolog
+     Forma general de la relación:
+     ```prolog
         Calificacion (Usuario, Producto, Puntuacion).
         ```
         Ejemplo de consulta en Prolog:
-         ```prolog
-         clasificacion(maria, televisor, Puntuacion)
-         ```
+     ```prolog
+      clasificacion(maria, televisor, Puntuacion)
+     ```
    - **Regla de Recomendación:**
   
         Forma general de la relación:
