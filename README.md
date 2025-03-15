@@ -15,11 +15,55 @@ El proyecto está compuesto por los siguientes elementos:
 
 ### Ejecución
 1. **Abrir SWI-Prolog**. Puede abrirse en el navegador por medio de este [link](https://swish.swi-prolog.org/).
-2. **Cargar el archivo con la base de datos y reglas**:
+2. **Diseño de las variables**:
    ```prolog
+   % Definición de usuarios
+   usuario(maria).
+   usuario(carlos).
+   usuario(juan).
+   usuario(esteban).
+   usuario(miguel).
 
-   ```
-3. **Ejecutar consultas** para interactuar con el sistema:
+   % Definición de productos y categorías
+   producto(televisor, electronico).
+   producto(smartphone, electronico).
+   producto(sillon, mueble).
+   producto(silla, mueble).
+   producto(reloj, accesorio).
+   producto(collar, accesorio).
+   producto(air_frier, cocina).
+   producto(olla, cocina).
+   producto(gta, juegos).
+   producto(fifa, juegos).
+
+   % Definición de compras de usuario
+   compra(maria, televisor).
+   compra(maria, sillon).
+   compra(carlos, fifa).
+   compra(carlos, smartphone).
+   compra(juan, reloj).
+   compra(juan, olla).
+   compra(esteban, silla).
+   compra(esteban, collar).
+   compra(miguel, gta).
+   compra(miguel, air_frier).
+
+   % Definición de calificaciones de productos (1-5)
+   calificacion(maria, televisor, 3).
+   calificacion(maria, sillon, 4).
+   calificacion(carlos, smartphone, 4).
+   calificacion(carlos, fifa, 5).
+   calificacion(juan, reloj, 5).
+   calificacion(juan, collar, 2).
+   calificacion(esteban, silla, 1).
+   calificacion(esteban, collar, 1).
+   calificacion(miguel, air_frier, 3).
+   calificacion(miguel, gta, 5).
+
+3. **Analizar Grafo Generado por medio del diseño de las variables**
+
+
+4. **Ejecutar consultas** para interactuar con el sistema:
    
    - **Ver productos comprados por un usuario:**
      ```prolog
