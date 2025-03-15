@@ -76,9 +76,11 @@ El proyecto está compuesto por los siguientes elementos:
 4. **Ejecutar consultas** para interactuar con el sistema:
    
    - **1.	Consulta de productos comprados:**
+     Forma general de la relación:
      ```prolog
      Compra(Usuario, Producto)
      ```
+     Ejemplo:
      ```prolog
       compra(juan,Producto)
      ```
