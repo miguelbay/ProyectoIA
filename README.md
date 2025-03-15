@@ -127,7 +127,6 @@ El proyecto está compuesto por los siguientes elementos:
        Lista).
         ```
    - **Recomendación recursiva:**
-      Definición de regla en Prolog:
      ```prolog
      recomendar_recursivo(_, [], []).
    
