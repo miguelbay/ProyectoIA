@@ -60,13 +60,17 @@ El proyecto está compuesto por los siguientes elementos:
    calificacion(miguel, air_frier, 3).
    calificacion(miguel, gta, 5).
 
-3. **Analizar Grafo Generado por medio del diseño de las variables**
+<br><br>
+
+### 3. Analizar Grafo Generado por medio del diseño de las variables
+
 ![Grafo de Usuarios y Productos](GrafoProyectoIA.png)
 
-- Las flechas indican qué compró cada usuario y a qué categoría pertenece cada producto. Esto permite hacer recomendaciones, como sugerir productos de la misma categoría a diferentes usuarios.
-- Ejemplo de Conexiones:
-     -- Carlos Compró un Smartphone de la categoria de Electronicos
-     -- Maria, rambien compró algo de la categoria de Electronicos, pero su compra fue un televisor
+- Las flechas indican qué compró cada usuario y a qué categoría pertenece cada producto.  
+  Esto permite hacer recomendaciones, como sugerir productos de la misma categoría a diferentes usuarios.
+- **Ejemplo de Conexiones:**  
+  - **Carlos** compró un **Smartphone** de la categoría **Electrónicos**.  
+  - **María** también compró algo de **Electrónicos**, pero su compra fue un **Televisor**.
 
 
 4. **Ejecutar consultas** para interactuar con el sistema:
