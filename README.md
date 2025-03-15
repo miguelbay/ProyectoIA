@@ -126,7 +126,7 @@ El proyecto está compuesto por los siguientes elementos:
      calificacion(_, Producto, Puntuacion)), 
      Lista).
      ```
-   - **Recomendación recursiva:**
+- **Recomendación recursiva:**
      
      Definición de regla en Prolog:
      ```prolog
