@@ -75,16 +75,12 @@ El proyecto está compuesto por los siguientes elementos:
      ```prolog
      ```
 
-## Grafo
 
-## Consultas Implementadas
-- 
-- 
-- 
+
 
 
 ## Presentado Por
-Natalia Echeverry Salcedo
-Esteban Altamiranda Julio
-Miguel Bayona Rivera
-Juan Morales Espitia
+- Natalia Echeverry Salcedo
+- Esteban Altamiranda Julio
+- Miguel Bayona Rivera
+- Juan Morales Espitia
