@@ -149,14 +149,14 @@ El proyecto está compuesto por los siguientes elementos:
    ```
    
    Forma general de la relación:
-      ```prolog
+  ```prolog
      recomendar_con_recursion(Usuario, Lista).
-     ```
+  ```
    
-     Ejemplo de consulta en Prolog:
-     ```prolog
+  Ejemplo de consulta en Prolog:
+  ```prolog
      recomendar_con_recursion(maria, Lista).
-      ```
+  ```
 
 - **Top 10 mejores productos:**
      Forma general de la relación:
