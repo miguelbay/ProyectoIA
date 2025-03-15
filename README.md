@@ -125,8 +125,10 @@ El proyecto está compuesto por los siguientes elementos:
        (recomendar_por_calificacion(juan, Producto), 
         calificacion(_, Producto, Puntuacion)), 
        Lista).
-        ```
+     ```
    - **Recomendación recursiva:**
+     
+     Definición de regla en Prolog:
      ```prolog
      recomendar_recursivo(_, [], []).
    
