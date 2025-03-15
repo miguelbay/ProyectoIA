@@ -88,89 +88,90 @@ El proyecto está compuesto por los siguientes elementos:
      
    - **Calificación que un usuario :**
   
-     Forma general de la relación:
-     ```prolog
-     Calificacion (Usuario, Producto, Puntuacion).
-     ```
-     Ejemplo de consulta en Prolog:
-      ```prolog
-      clasificacion(maria, televisor, Puntuacion)
-      ```
+        Forma general de la relación:
+        ```prolog
+        Calificacion (Usuario, Producto, Puntuacion).
+        ```
+        Ejemplo de consulta en Prolog:
+         ```prolog
+         clasificacion(maria, televisor, Puntuacion)
+         ```
    - **Regla de Recomendación:**
   
-     Forma general de la relación:
-     ```prolog
-     compra(Usuario, ProductoComprado), 
-     producto(ProductoComprado, Categoria), 
-     producto(ProductoRecomendado, Categoria), 
-     ProductoComprado \= ProductoRecomendado.
-     ```
+        Forma general de la relación:
+        ```prolog
+        compra(Usuario, ProductoComprado), 
+        producto(ProductoComprado, Categoria), 
+        producto(ProductoRecomendado, Categoria), 
+        ProductoComprado \= ProductoRecomendado.
+        ```
  - **Recomendación por buena calificación:**
 
-   Forma general de la relación:
+      Forma general de la relación:
      ```prolog
      calificacion(OtroUsuario, ProductoRecomendado, Puntuacion),
      Puntuacion >= 4, Usuario \= OtroUsuario.
      ```
-  Ejemplo de consulta en Prolog:
-   ```prolog
+     Ejemplo de consulta en Prolog:
+      ```prolog
      calificacion(OtroUsuario, ProductoRecomendado, Puntuacion),
      Puntuacion >= 4, juan \= OtroUsuario.
      ```
  - **Recomendación buena calificación (Lista):**
 
-   Forma general de la relación:
+      Forma general de la relación:
      ```prolog
-     findall((Producto, Puntuacion), 
-    (recomendar_por_calificacion(juan, Producto), 
-     calificacion(_, Producto, Puntuacion)), 
-    Lista).
-     ```
+        findall((Producto, Puntuacion), 
+       (recomendar_por_calificacion(juan, Producto), 
+        calificacion(_, Producto, Puntuacion)), 
+       Lista).
+        ```
    - **Recomendación recursiva:**
 
-   Definición de regla en Prolog:
-  ```prolog
-  recomendar_recursivo(_, [], []).
-
-  recomendar_recursivo(Usuario, [ProductoComprado|Resto], ListaFinal) :-
-      findall(ProductoRecomendado,
-          (producto(ProductoRecomendado, Categoria),
-           producto(ProductoComprado, Categoria),
-           ProductoComprado \= ProductoRecomendado,
-           not(compra(Usuario, ProductoRecomendado))),
-          Recomendaciones),
-      recomendar_recursivo(Usuario, Resto, RestoRecomendados),
-      append(Recomendaciones, RestoRecomendados, ListaSinDuplicados),
-      sort(ListaSinDuplicados, ListaFinal).
-
-  recomendar_con_recursion(Usuario, ListaRecomendada) :-
-      findall(Producto, compra(Usuario, Producto), Compras),
-      recomendar_recursivo(Usuario, Compras, ListaRecomendada).
-```
-
-Forma general de la relación:
-   ```prolog
-  recomendar_con_recursion(Usuario, Lista).
-  ```
-
-  Ejemplo de consulta en Prolog:
-  ```prolog
-  recomendar_con_recursion(maria, Lista).
+      Definición de regla en Prolog:
+     ```prolog
+     recomendar_recursivo(_, [], []).
+   
+     recomendar_recursivo(Usuario, [ProductoComprado|Resto], ListaFinal) :-
+         findall(ProductoRecomendado,
+             (producto(ProductoRecomendado, Categoria),
+              producto(ProductoComprado, Categoria),
+              ProductoComprado \= ProductoRecomendado,
+              not(compra(Usuario, ProductoRecomendado))),
+             Recomendaciones),
+         recomendar_recursivo(Usuario, Resto, RestoRecomendados),
+         append(Recomendaciones, RestoRecomendados, ListaSinDuplicados),
+         sort(ListaSinDuplicados, ListaFinal).
+   
+     recomendar_con_recursion(Usuario, ListaRecomendada) :-
+         findall(Producto, compra(Usuario, Producto), Compras),
+         recomendar_recursivo(Usuario, Compras, ListaRecomendada).
    ```
+   
+   Forma general de la relación:
+      ```prolog
+     recomendar_con_recursion(Usuario, Lista).
+     ```
+   
+     Ejemplo de consulta en Prolog:
+     ```prolog
+     recomendar_con_recursion(maria, Lista).
+      ```
 
 - **Top 10 mejores productos:**
 
-   Forma general de la relación:
-     ```prolog
+     Forma general de la relación:
+      ```prolog
      findall((Usuario, Producto, Puntuacion),(calificacion(Usuario,Producto, Puntuacion), Puntuacion > 3), 
-     ```
+     Lista). 
+      ```
    Ejemplo de consulta en Prolog:
-   ```prolog
+     ```prolog
      findall((juan, Producto, Puntuacion), 
-    (calificacion(juan, Producto, Puntuacion), 
-     Puntuacion > 3), 
-    Lista).
- ```
+       (calificacion(juan, Producto, Puntuacion), 
+        Puntuacion > 3), 
+       Lista).
+      ```
 
 
  **Presentado Por:**
