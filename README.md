@@ -92,7 +92,7 @@ El proyecto está compuesto por los siguientes elementos:
      ```prolog
         Calificacion (Usuario, Producto, Puntuacion).
      ```
-        Ejemplo de consulta en Prolog:
+      Ejemplo de consulta en Prolog:
      ```prolog
       clasificacion(maria, televisor, Puntuacion)
      ```
