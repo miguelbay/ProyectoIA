@@ -81,7 +81,7 @@ El proyecto está compuesto por los siguientes elementos:
      ```prolog
      Compra(Usuario, Producto).
      ```
-     Ejemplo:
+     Ejemplo de consulta en Prolog:
      ```prolog
       compra(juan,Producto).
      ```
@@ -92,7 +92,7 @@ El proyecto está compuesto por los siguientes elementos:
      ```prolog
      Calificacion (Usuario, Producto, Puntuacion).
      ```
-     Ejemplo:
+     Ejemplo de consulta en Prolog:
       ```prolog
       clasificacion(maria, televisor, Puntuacion)
       ```
@@ -112,7 +112,7 @@ El proyecto está compuesto por los siguientes elementos:
      calificacion(OtroUsuario, ProductoRecomendado, Puntuacion),
      Puntuacion >= 4, Usuario \= OtroUsuario.
      ```
-   Ejemplo:
+  Ejemplo de consulta en Prolog:
    ```prolog
      calificacion(OtroUsuario, ProductoRecomendado, Puntuacion),
      Puntuacion >= 4, juan \= OtroUsuario.
@@ -128,6 +128,7 @@ El proyecto está compuesto por los siguientes elementos:
      ```
    - **Recomendación recursiva:**
 
+   Definición de regla en Prolog:
   ```prolog
   recomendar_recursivo(_, [], []).
 
@@ -163,7 +164,7 @@ Forma general de la relación:
      ```prolog
      findall((Usuario, Producto, Puntuacion),(calificacion(Usuario,Producto, Puntuacion), Puntuacion > 3), 
      ```
-   Ejemplo:
+   Ejemplo de consulta en Prolog:
    ```prolog
      findall((juan, Producto, Puntuacion), 
     (calificacion(juan, Producto, Puntuacion), 
@@ -172,7 +173,7 @@ Forma general de la relación:
  ```
 
 
-## Presentado Por
+ **Presentado Por:**
 - Natalia Echeverry Salcedo
 - Esteban Altamiranda Julio
 - Miguel Bayona Rivera
