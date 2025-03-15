@@ -8,13 +8,13 @@ Este proyecto implementa un **sistema de recomendación de productos** utilizand
 El proyecto está compuesto por los siguientes elementos:
 
 - **Base de datos de hechos**: Contiene la información de usuarios, productos, compras y calificaciones.
-- **Reglas de conexión (Grafo) **: Define las relaciones entre usuarios, productos y categorías.
+- **Reglas de conexión (Grafo)**: Define las relaciones entre usuarios, productos y categorías.
 - **Consultas de recomendación**: Permite obtener productos recomendados para un usuario basándose en distintos criterios.
 
 ## Uso y Ejecucuion del Programa
 
 ### Ejecución
-1. **Abrir SWI-Prolog o SWISH**. puede abrisrse en el navegador por medio de este link: 
+1. **Abrir SWI-Prolog**. Puede abrirse en el navegador por medio de este [link](https://swish.swi-prolog.org/).
 2. **Cargar el archivo con la base de datos y reglas**:
    ```prolog
 
