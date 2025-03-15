@@ -98,13 +98,13 @@ El proyecto está compuesto por los siguientes elementos:
      ```
    - **Regla de Recomendación:**
   
-        Forma general de la relación:
-        ```prolog
-        compra(Usuario, ProductoComprado), 
-        producto(ProductoComprado, Categoria), 
-        producto(ProductoRecomendado, Categoria), 
-        ProductoComprado \= ProductoRecomendado.
-        ```
+     Forma general de la relación:
+     ```prolog
+     compra(Usuario, ProductoComprado), 
+     producto(ProductoComprado, Categoria), 
+     producto(ProductoRecomendado, Categoria), 
+     ProductoComprado \= ProductoRecomendado.
+     ```
  - **Recomendación por buena calificación:**
 
       Forma general de la relación:
@@ -121,10 +121,10 @@ El proyecto está compuesto por los siguientes elementos:
 
       Forma general de la relación:
      ```prolog
-        findall((Producto, Puntuacion), 
-       (recomendar_por_calificacion(juan, Producto), 
-        calificacion(_, Producto, Puntuacion)), 
-       Lista).
+     findall((Producto, Puntuacion), 
+     (recomendar_por_calificacion(juan, Producto), 
+     calificacion(_, Producto, Puntuacion)), 
+     Lista).
      ```
    - **Recomendación recursiva:**
      
