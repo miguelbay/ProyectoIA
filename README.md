@@ -7,7 +7,7 @@ Este proyecto implementa un **sistema de recomendación de productos** utilizand
 ## Estructura del Proyecto
 El proyecto está compuesto por los siguientes elementos:
 
-- **Base de datos de hechos**: Contiene la información de usuarios, productos, compras y calificaciones.
+- **Diseño de Variables**: Contiene la información de usuarios, productos, compras y calificaciones.
 - **Reglas de conexión (Grafo)**: Define las relaciones entre usuarios, productos y categorías.
 - **Consultas de recomendación**: Permite obtener productos recomendados para un usuario basándose en distintos criterios.
 
@@ -61,6 +61,12 @@ El proyecto está compuesto por los siguientes elementos:
    calificacion(miguel, gta, 5).
 
 3. **Analizar Grafo Generado por medio del diseño de las variables**
+![Grafo de Usuarios y Productos](GrafoProyectoIA.png)
+
+- Las flechas indican qué compró cada usuario y a qué categoría pertenece cada producto. Esto permite hacer recomendaciones, como sugerir productos de la misma categoría a diferentes usuarios.
+- Ejemplo de Conexiones:
+     -- Carlos Compró un Smartphone de la categoria de Electronicos
+     -- Maria, rambien compró algo de la categoria de Electronicos, pero su compra fue un televisor
 
 
 4. **Ejecutar consultas** para interactuar con el sistema:
