@@ -75,25 +75,101 @@ El proyecto está compuesto por los siguientes elementos:
 
 4. **Ejecutar consultas** para interactuar con el sistema:
    
-   - **1.	Consulta de productos comprados:**
+   - **Consulta de productos comprados:**
 
      Forma general de la relación:
      ```prolog
-     Compra(Usuario, Producto)
+     Compra(Usuario, Producto).
      ```
      Ejemplo:
      ```prolog
-      compra(juan,Producto)
+      compra(juan,Producto).
      ```
-   - **Ver conexiones entre productos de la misma categoría:**
+     
+   - **Calificación que un usuario :**
+  
+     Forma general de la relación:
      ```prolog
+     Calificacion (Usuario, Producto, Puntuacion).
      ```
-   - **Buscar una ruta entre un usuario y un producto:**
+     Ejemplo:
+      ```prolog
+      clasificacion(maria, televisor, Puntuacion)
+      ```
+   - **Regla de Recomendación:**
+  
+     Forma general de la relación:
      ```prolog
+     compra(Usuario, ProductoComprado), 
+     producto(ProductoComprado, Categoria), 
+     producto(ProductoRecomendado, Categoria), 
+     ProductoComprado \= ProductoRecomendado.
+     ```
+ - **Recomendación por buena calificación:**
+
+   Forma general de la relación:
+     ```prolog
+     calificacion(OtroUsuario, ProductoRecomendado, Puntuacion),
+     Puntuacion >= 4, Usuario \= OtroUsuario.
+     ```
+   Ejemplo:
+   ```prolog
+     calificacion(OtroUsuario, ProductoRecomendado, Puntuacion),
+     Puntuacion >= 4, juan \= OtroUsuario.
+     ```
+ - **Recomendación buena calificación (Lista):**
+
+   Forma general de la relación:
+     ```prolog
+     findall((Producto, Puntuacion), 
+    (recomendar_por_calificacion(juan, Producto), 
+     calificacion(_, Producto, Puntuacion)), 
+    Lista).
+     ```
+    - **Recomendación recursiva:**
+
+   Definición de regla en Prolog:
+    ```prolog
+     recomendar_recursivo(_, [], []).
+
+recomendar_recursivo(Usuario, [ProductoComprado|Resto], ListaFinal) :-
+    findall(ProductoRecomendado,
+        (producto(ProductoRecomendado, Categoria),
+         producto(ProductoComprado, Categoria),
+         ProductoComprado \= ProductoRecomendado,
+         not(compra(Usuario, ProductoRecomendado))),
+        Recomendaciones),
+    recomendar_recursivo(Usuario, Resto, RestoRecomendados),
+    append(Recomendaciones, RestoRecomendados, ListaSinDuplicados),
+    sort(ListaSinDuplicados, ListaFinal).
+
+recomendar_con_recursion(Usuario, ListaRecomendada) :-
+    findall(Producto, compra(Usuario, Producto), Compras),
+    recomendar_recursivo(Usuario, Compras, ListaRecomendada).
      ```
 
+   Forma general de la relación:
+     ```prolog
+      recomendar_con_recursion(Usuario, Lista).
+     ```
+   Ejemplo:
+   ```prolog
+     recomendar_con_recursion(maria, Lista).
+     ```
 
+- **Top 10 mejores productos:**
 
+   Forma general de la relación:
+     ```prolog
+     findall((Usuario, Producto, Puntuacion),(calificacion(Usuario,Producto, Puntuacion), Puntuacion > 3), 
+     ```
+   Ejemplo:
+   ```prolog
+     findall((juan, Producto, Puntuacion), 
+    (calificacion(juan, Producto, Puntuacion), 
+     Puntuacion > 3), 
+    Lista).
+ ```
 
 
 ## Presentado Por
