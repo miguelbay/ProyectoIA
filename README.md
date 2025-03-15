@@ -145,12 +145,17 @@ El proyecto está compuesto por los siguientes elementos:
   recomendar_con_recursion(Usuario, ListaRecomendada) :-
       findall(Producto, compra(Usuario, Producto), Compras),
       recomendar_recursivo(Usuario, Compras, ListaRecomendada).
+```
 
-  % Forma general de la relación:
+Forma general de la relación:
+   ```prolog
   recomendar_con_recursion(Usuario, Lista).
+  ```
 
-  % Ejemplo de consulta en Prolog:
+  Ejemplo de consulta en Prolog:
+  ```prolog
   recomendar_con_recursion(maria, Lista).
+   ```
 
 - **Top 10 mejores productos:**
 
