@@ -91,7 +91,7 @@ El proyecto está compuesto por los siguientes elementos:
      Forma general de la relación:
      ```prolog
         Calificacion (Usuario, Producto, Puntuacion).
-        ```
+     ```
         Ejemplo de consulta en Prolog:
      ```prolog
       clasificacion(maria, televisor, Puntuacion)
