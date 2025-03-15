@@ -75,7 +75,7 @@ El proyecto está compuesto por los siguientes elementos:
 
 4. **Ejecutar consultas** para interactuar con el sistema:
    
-   - **Consulta de productos comprados:**
+ - **Consulta de productos comprados:**
 
      Forma general de la relación:
      ```prolog
@@ -86,7 +86,7 @@ El proyecto está compuesto por los siguientes elementos:
       compra(juan,Producto).
      ```
      
-   - **Calificación que un usuario :**
+ - **Calificación que un usuario :**
   
      Forma general de la relación:
      ```prolog
@@ -96,7 +96,7 @@ El proyecto está compuesto por los siguientes elementos:
      ```prolog
       clasificacion(maria, televisor, Puntuacion)
      ```
-   - **Regla de Recomendación:**
+  - **Regla de Recomendación:**
   
      Forma general de la relación:
      ```prolog
