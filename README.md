@@ -127,7 +127,6 @@ El proyecto está compuesto por los siguientes elementos:
        Lista).
         ```
    - **Recomendación recursiva:**
-
       Definición de regla en Prolog:
      ```prolog
      recomendar_recursivo(_, [], []).
@@ -159,12 +158,11 @@ El proyecto está compuesto por los siguientes elementos:
       ```
 
 - **Top 10 mejores productos:**
-
      Forma general de la relación:
-      ```prolog
+     ```prolog
      findall((Usuario, Producto, Puntuacion),(calificacion(Usuario,Producto, Puntuacion), Puntuacion > 3), 
      Lista). 
-      ```
+     ```
    Ejemplo de consulta en Prolog:
      ```prolog
      findall((juan, Producto, Puntuacion), 
