@@ -172,7 +172,11 @@ El proyecto está compuesto por los siguientes elementos:
        Lista).
       ```
  Sustentacion: 
-- Inicialmente, para realizar una recomandacion atraves de reviews emplearemos la igualacion del adjetivo que aparece en el review, y este sera comparado con una base de hechos, en la cual se igualará con el adjetivo encontrado en el review para de esta manera generar una recomendacion basada en una calificacion parcial segun la base de hechos
+- Para recomendar un producto a través de reseñas, es fundamental clasificarlo con base en adjetivos que reflejen su calidad. Se puede evaluar si es duradero o frágil, funcional o ineficaz, confiable o propenso a fallos, seguro o riesgoso, atractivo o poco estético, y preciso o inconsistente en relación con sus especificaciones. Esta clasificación permite a los usuarios comparar productos de manera objetiva y tomar decisiones informadas sobre su compra.
+
+Referencia bibliográfica en formato APA 7:
+
+Master Málaga. (s.f.). Criterios para determinar el nivel de calidad de un producto. Recuperado el 18 de marzo de 2025, de https://www.master-malaga.com/empresas/criterios-nivel-calidad-producto/
 
 
  **Presentado Por:**
