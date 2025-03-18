@@ -171,6 +171,8 @@ El proyecto está compuesto por los siguientes elementos:
         Puntuacion > 3), 
        Lista).
       ```
+ Sustentacion: 
+- Inicialmente, para realizar una recomandacion atraves de reviews emplearemos la igualacion del adjetivo que aparece en el review, y este sera comparado con una base de hechos, en la cual se igualará con el adjetivo encontrado en el review para de esta manera generar una recomendacion basada en una calificacion parcial segun la base de hechos
 
 
  **Presentado Por:**
